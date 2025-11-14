@@ -6,9 +6,9 @@ public class exercice_4_5 {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        boolean repeat = true;
+        boolean repeat = true;//val 4 cycle
 
-        while (repeat) {
+        while (repeat) {//cycle if user enter invalid values
             int populationA = population(input, "Enter population of country A: ");
             double rateA = rate(input, "Enter growth rate of country A (in %): ");
             int populationB = population(input, "Enter population of country B: ");
@@ -36,12 +36,12 @@ public class exercice_4_5 {
 
     }
 
-    
-    public static int population(Scanner input, String message) {
+    //funcs
+    public static int population(Scanner input, String message) {//func 4 counting/cheks population
         int value;
         while (true) {
             System.out.print(message);
-            if (input.hasNextInt()) {
+            if (input.hasNextInt()) {//cheks if val is int
                 value = input.nextInt();
                 if (value > 0) break;
                 else System.out.println("Error: enter a positive number.");
@@ -53,11 +53,11 @@ public class exercice_4_5 {
         return value;
     }
 
-    public static double rate(Scanner input, String message) {
+    public static double rate(Scanner input, String message) {//func 4 counting/cheks rate 
         double value;
         while (true) {
             System.out.print(message);
-            if (input.hasNextDouble()) {
+            if (input.hasNextDouble()) {//cheks if val is double
                 value = input.nextDouble();
                 if (value >= 0) break;
                 else System.out.println("Error: enter a positive number.");
@@ -69,3 +69,4 @@ public class exercice_4_5 {
         return value;
     }
 }
+
